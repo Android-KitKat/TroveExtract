@@ -2,6 +2,7 @@
 rem 启用延迟环境变量扩展
 setlocal EnableDelayedExpansion
 rem 提取Trove全部的资源文件。
+rem 版本：v1.0.0
 rem https://github.com/Android-KitKat/TroveExtract
 rem 将此文件放入游戏目录，运行此文件。
 rem 资源文件将被提取到游戏目录的extracted文件夹。
