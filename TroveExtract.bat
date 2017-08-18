@@ -9,7 +9,7 @@ rem 资源文件将被提取到游戏目录的extracted文件夹。
 
 rem 判断是否存在Trove.exe
 if not exist Trove.exe (
-  echo Trove.exe不存在，请放至游戏目录。
+  echo Trove.exe不存在，请将此文件放入游戏目录。
   goto end
 )
 rem 游戏目录
