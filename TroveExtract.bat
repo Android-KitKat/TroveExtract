@@ -2,11 +2,16 @@
 rem 启用延迟环境变量扩展
 setlocal EnableDelayedExpansion
 rem 提取Trove全部的资源文件。
-rem 版本：v1.0.0
+rem 版本：v1.1.0
 rem https://github.com/Android-KitKat/TroveExtract
 rem 将此文件放入游戏目录，运行此文件。
 rem 资源文件将被提取到游戏目录的extracted文件夹。
 
+rem 判断是否存在Trove.exe
+if not exist Trove.exe (
+  echo Trove.exe不存在，请放至游戏目录。
+  goto end
+)
 rem 游戏目录
 set TROVEDIR=%~dp0
 rem 遍历文件夹
@@ -22,5 +27,6 @@ for /R /D %%i in (*) do (
   )
 )
 echo 提取完成
+:end
 endlocal
 pause
