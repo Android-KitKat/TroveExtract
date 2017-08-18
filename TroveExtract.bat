@@ -7,6 +7,8 @@ rem https://github.com/Android-KitKat/TroveExtract
 rem 将此文件放入游戏目录，运行此文件。
 rem 资源文件将被提取到游戏目录的extracted文件夹。
 
+rem 设置标题
+title 提取资源文件
 rem 判断是否存在Trove.exe
 if not exist Trove.exe (
   echo Trove.exe不存在，请将此文件放入游戏目录。
