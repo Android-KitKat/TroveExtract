@@ -1,6 +1,6 @@
 @ECHO OFF
 rem 设置字符编码为UTF-8。
-chcp 65001
+chcp 65001 > nul
 rem 启用延迟环境变量扩展
 setlocal EnableDelayedExpansion
 rem 提取Trove全部的资源文件。^
