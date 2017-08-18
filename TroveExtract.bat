@@ -19,11 +19,11 @@ for /R /D %%i in (*) do (
   rem 判断是否存在索引
   if exist %%i\index.tfi (
     rem 目标文件夹的相对路径
-	set TARGETDIR=%%i
+    set TARGETDIR=%%i
     set TARGETDIR=!TARGETDIR:%TROVEDIR%=!
-	rem 提取资源文件
-	echo 开始提取!TARGETDIR!
-	Trove.exe -tool extractarchive !TARGETDIR! extracted\!TARGETDIR!
+    rem 提取资源文件
+    echo 开始提取!TARGETDIR!
+    Trove.exe -tool extractarchive !TARGETDIR! extracted\!TARGETDIR!
   )
 )
 echo 提取完成
