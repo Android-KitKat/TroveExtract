@@ -1,34 +1,36 @@
 @ECHO OFF
-rem фТсцясЁы╩╥╬Ё╠Да©ю╘у╧
+rem Х╝╬Г╫╝Е╜≈Г╛╕Г╪√Г═│Д╦╨UTF-8Ц─┌
+chcp 65001
+rem Е░╞Г■╗Е╩╤Х©÷Г▌╞Е╒┐Е▐≤И┤▐Ф┴╘Е╠∙
 setlocal EnableDelayedExpansion
-rem лАх║Troveх╚╡©╣двйт╢нд╪Ч║ё
-rem ╟Ф╠╬ё╨v1.1.0
-rem https://github.com/Android-KitKat/TroveExtract
-rem ╫╚╢кнд╪Ч╥ехКсно╥д©б╪ё╛ткпп╢кнд╪Ч║ё
-rem вйт╢нд╪Ч╫╚╠╩лАх║╣╫сно╥д©б╪╣дextractedнд╪Ч╪п║ё
+rem Ф▐░Е▐√TroveЕ┘╗И┐╗Г └Х╣└Ф╨░Ф√┤Д╩╤Ц─┌^
+Г┴┬Ф°╛О╪ v1.1.0^
+https://github.com/Android-KitKat/TroveExtract^
+Е╟├Ф╜╓Ф√┤Д╩╤Ф■╬Е┘╔Ф╦╦Ф┬▐Г⌡╝Е╫∙О╪▄Х©░Х║▄Ф╜╓Ф√┤Д╩╤Ц─┌^
+Х╣└Ф╨░Ф√┤Д╩╤Е╟├Х╒╚Ф▐░Е▐√Е┬╟Ф╦╦Ф┬▐Г⌡╝Е╫∙Г └extractedФ√┤Д╩╤Е╓╧Ц─┌
 
-rem иХжц╠ЙлБ
-title лАх║вйт╢нд╪Ч
-rem еп╤ойг╥Я╢ФтзTrove.exe
+rem Х╝╬Г╫╝Ф═┤И╒≤
+title Ф▐░Е▐√Х╣└Ф╨░Ф√┤Д╩╤
+rem Е┬╓Ф√╜Ф≤╞Е░╕Е╜≤Е°╗Trove.exe
 if not exist Trove.exe (
-  echo Trove.exe╡╩╢Фтзё╛гК╫╚╢кнд╪Ч╥ехКсно╥д©б╪║ё
+  echo Trove.exeД╦█Е╜≤Е°╗О╪▄Х╞╥Е╟├Ф╜╓Ф√┤Д╩╤Ф■╬Е┘╔Ф╦╦Ф┬▐Г⌡╝Е╫∙Ц─┌
   goto end
 )
-rem сно╥д©б╪
+rem Ф╦╦Ф┬▐Г⌡╝Е╫∙
 set TROVEDIR=%~dp0
-rem ╠ИюЗнд╪Ч╪п
+rem И│█Е▌├Ф√┤Д╩╤Е╓╧
 for /R /D %%i in (*) do (
-  rem еп╤ойг╥Я╢ФтзкВрЩ
+  rem Е┬╓Ф√╜Ф≤╞Е░╕Е╜≤Е°╗Г╢╒Е╪∙
   if exist %%i\index.tfi (
-    rem д©╠Йнд╪Ч╪п╣доЮ╤тб╥╬╤
+    rem Г⌡╝Ф═┤Ф√┤Д╩╤Е╓╧Г └Г⌡╦Е╞╧Х╥╞Е╬└
     set TARGETDIR=%%i
     set TARGETDIR=!TARGETDIR:%TROVEDIR%=!
-    rem лАх║вйт╢нд╪Ч
-    echo ©╙й╪лАх║!TARGETDIR!
+    rem Ф▐░Е▐√Х╣└Ф╨░Ф√┤Д╩╤
+    echo Е╪─Е╖▀Ф▐░Е▐√!TARGETDIR!
     Trove.exe -tool extractarchive !TARGETDIR! extracted\!TARGETDIR!
   )
 )
-echo лАх║мЙЁи
+echo Ф▐░Е▐√Е╝▄Ф┬░
 :end
 endlocal
 pause
